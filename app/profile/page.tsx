@@ -9,7 +9,6 @@ import Profile from "@components/Profile";
 const MyProfile = () => {
   const router = useRouter();
   const { data: session } = useSession();
-  console.log("🤪 ~ file: page.tsx:10 : ", session);
 
   const [posts, setPosts] = useState([]);
 
