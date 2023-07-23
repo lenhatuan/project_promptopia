@@ -8,7 +8,7 @@ const PromptCardList = ({
   handleTagClick,
 }: {
   data: any[];
-  handleTagClick: (post) => void;
+  handleTagClick: (post: any) => void;
 }) => {
   return (
     <div className="mt-16 prompt_layout">

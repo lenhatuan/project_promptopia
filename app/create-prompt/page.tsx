@@ -5,8 +5,8 @@ import Form from "@components/Form";
 import { useRouter } from "next/navigation";
 
 const CreatePrompt = () => {
-  const { data: session = {} } = useSession();
-  console.log("🤪 ~ file: page.tsx:8 : ", session);
+  const { data: session } = useSession();
+
   const router = useRouter();
   const [submitting, setSubmitting] = useState(false);
   const [post, setPost] = useState({
@@ -21,7 +21,7 @@ const CreatePrompt = () => {
         method: "POST",
         body: JSON.stringify({
           prompt: post.prompt,
-          userId: session?.user.id,
+          userId: session?.user?.id,
           tag: post.tag,
         }),
       });
